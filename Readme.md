@@ -1,7 +1,7 @@
 # Личный проект «Readme»
 
 * Студент: [Константин К](https://up.htmlacademy.ru/php/12/user/267983).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Попов](https://htmlacademy.ru/profile/id1181399).
 
 ---
 
