@@ -64,7 +64,7 @@ $cards = [
 
 function text_content_limit(string $text, int $limit = 300) : string
 {
-    if (strlen($text) <= $limit) {
+    if (mb_strlen($text) <= $limit) {
         return "<p>{$text}</p>";
     }
 
@@ -73,6 +73,7 @@ function text_content_limit(string $text, int $limit = 300) : string
     $stop_index = mb_strrpos($preview_content, ' ');
 
     $result = mb_substr($preview_content, 0, $stop_index);
+
     return "
         <p>
             {$result}...
@@ -80,7 +81,6 @@ function text_content_limit(string $text, int $limit = 300) : string
             <a class=\"post-text__more-link\" href=\"#\">Читать далее</a>
         </p>
         ";
-
 }
 
 ?>
