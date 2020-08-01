@@ -15,7 +15,7 @@ $cards = [
         'avatar' => 'userpic-larisa-small.jpg'
     ],
     [
-        'header' => 'Игра престолов',
+        'header' => '<script>alert(1)</script>Игра престолов',
         'type' => 'post-text',
         'content' => 'Не могу дождаться начала финального сезона своего любимого сериала!',
         'username' => 'Владик',
@@ -91,7 +91,7 @@ function include_template(string $file_name, array $data = array()) : string
 
     extract($data);
 
-    $output = require ($path);
+    $output = require $path;
 
     return $output;
 

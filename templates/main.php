@@ -94,7 +94,7 @@
                 <article class="popular__post post <?= $card['type']; ?>">
 
                     <header class="post__header">
-                        <h2> <?= $card['header']; ?> </h2>
+                        <h2> <?= htmlspecialchars($card['header']); ?> </h2>
                     </header>
                     <div class="post__main">
 
@@ -104,7 +104,7 @@
 
                             <blockquote>
                                 <p>
-                                    <?= $card['content']; ?>
+                                    <?= htmlspecialchars($card['content']); ?>
                                 </p>
                                 <cite>Неизвестный Автор</cite>
                             </blockquote>
@@ -121,10 +121,10 @@
                                                  alt="Иконка">
                                         </div>
                                         <div class="post-link__info">
-                                            <h3> <?= $card['header']; ?> </h3>
+                                            <h3> <?= htmlspecialchars($card['header']); ?> </h3>
                                         </div>
                                     </div>
-                                    <span> <?= $card['content']; ?> </span>
+                                    <span> <?= htmlspecialchars($card['content']); ?> </span>
                                 </a>
                             </div>
 
@@ -158,7 +158,7 @@
 
                             <!--содержимое для поста-текста-->
 
-                            <?= text_content_limit($card['content']); ?>
+                            <?= text_content_limit(htmlspecialchars($card['content'])); ?>
 
 
                         <?php endif; ?>
@@ -173,7 +173,7 @@
                                          alt="Аватар пользователя">
                                 </div>
                                 <div class="post__info">
-                                    <b class="post__author-name"><?= $card['username']; ?></b>
+                                    <b class="post__author-name"><?= htmlspecialchars($card['username']); ?></b>
                                     <time class="post__time" datetime="">дата</time>
                                 </div>
                             </a>

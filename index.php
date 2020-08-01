@@ -1,6 +1,6 @@
 <?php
 
-require ('utils.php');
+require_once ('utils.php');
 
 
 $page_content = include_template('main.php', ['cards' => $cards]);
@@ -13,6 +13,6 @@ $layout_content = include_template('layout.php', [
 
 ]);
 
-//print($layout_content);
+print($layout_content);
 
 
