@@ -85,16 +85,6 @@ function text_content_limit(string $text, int $limit = 300) : string
 }
 
 
-function include_template(string $file_name, array $data = array()) : string
-{
-    $path = "templates/{$file_name}";
 
-    extract($data);
-
-    $output = require $path;
-
-    return $output;
-
-}
 
 
