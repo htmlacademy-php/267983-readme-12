@@ -174,9 +174,9 @@
                                 </div>
                                 <div class="post__info">
                                     <b class="post__author-name"><?= htmlspecialchars($card['username']); ?></b>
-                                    <time class="post__time"  title="<?=date_formatter(generate_random_date($index),'title');?>"
-                                          datetime="<?=date_formatter(generate_random_date($index));?>">
-                                    <?=date_formatter(generate_random_date($index),'tag');?>
+                                    <time class="post__time"  title="<?=date('d.m.Y H:i', generate_random_date($index));?>"
+                                          datetime="<?=generate_random_date($index);?>">
+                                    <?=date_formatter(generate_random_date($index));?>
                                     </time>
                                 </div>
                             </a>

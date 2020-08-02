@@ -2,7 +2,7 @@
 require_once ('helpers.php');
 require_once ('utils.php');
 
-date_default_timezone_set('Europe/Moscow	');
+date_default_timezone_set('Europe/Moscow');
 
 
 $page_content = include_template('main.php', ['cards' => $cards]);

@@ -87,22 +87,10 @@ function text_content_limit(string $text, int $limit = 300) : string
 
 
 
-function date_formatter(string $date, string $type='datetime') : string
+function date_formatter(string $date) : string
 {
 
-    // tag  - относительный формат
-    // title - в формате “дд.мм.гггг чч:мм”
-    // datetime - оригинальный формат
-
-
     $post_time = strtotime($date);
-
-
-    if ($type === 'datetime') {
-        return $date;
-    }
-
-    elseif ($type === 'tag') {
 
         $current_time = time();
 
@@ -125,12 +113,6 @@ function date_formatter(string $date, string $type='datetime') : string
         }
 
         return $months . get_noun_plural_form($months, " месяц"," месяца"," месяцев") . " назад";
-    }
-
-    // ниже формат для аттрибута title
-
-    return date('d.m.Y H:i', $post_time);
-
 
 }
 
