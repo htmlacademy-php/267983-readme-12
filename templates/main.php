@@ -174,10 +174,14 @@
                                 </div>
                                 <div class="post__info">
                                     <b class="post__author-name"><?= htmlspecialchars($card['username']); ?></b>
-                                    <time class="post__time"  title="<?=date('d.m.Y H:i', generate_random_date($index));?>"
-                                          datetime="<?=generate_random_date($index);?>">
-                                    <?=date_formatter(generate_random_date($index));?>
+                                    <?php $post_date = generate_random_date($index);?>
+
+
+                                    <time class="post__time"  title="<?=date('d.m.Y H:i', strtotime($post_date));?>"
+                                          datetime="<?=$post_date;?>">
+                                    <?=date_formatter($post_date);?>
                                     </time>
+                                    
                                 </div>
                             </a>
                         </div>

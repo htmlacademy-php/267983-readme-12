@@ -4,6 +4,7 @@ require_once ('utils.php');
 
 date_default_timezone_set('Europe/Moscow');
 
+//$post_date = generate_random_date($index);
 
 $page_content = include_template('main.php', ['cards' => $cards]);
 
