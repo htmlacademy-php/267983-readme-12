@@ -181,7 +181,7 @@
                                           datetime="<?=$post_date;?>">
                                     <?=date_formatter($post_date);?>
                                     </time>
-                                    
+
                                 </div>
                             </a>
                         </div>
