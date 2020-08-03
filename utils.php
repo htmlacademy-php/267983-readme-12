@@ -87,4 +87,35 @@ function text_content_limit(string $text, int $limit = 300) : string
 
 
 
+function date_formatter(string $date) : string
+{
+
+    $post_time = strtotime($date);
+
+        $current_time = time();
+
+        $delta = $current_time - $post_time;
+
+        $minutes = floor($delta/60);
+        $hours = floor($delta/3600);
+        $days = floor($delta/86400);
+        $weeks = floor($delta/604800);
+        $months = floor($delta/2629743);
+
+        if ($minutes <= 60) {
+            return $minutes . get_noun_plural_form($minutes, " минуту"," минуты"," минут") . " назад";
+        } elseif ($hours <= 24) {
+            return $hours . get_noun_plural_form($hours, " час"," часа"," часов") . " назад";
+        } elseif ($days <= 7) {
+            return $days . get_noun_plural_form($days, " день"," дня"," дней") . " назад";
+        } elseif ($weeks <= 5) {
+            return $weeks . get_noun_plural_form($weeks, " неделю"," недели"," недель") . " назад";
+        }
+
+        return $months . get_noun_plural_form($months, " месяц"," месяца"," месяцев") . " назад";
+
+}
+
+
+
 

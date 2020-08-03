@@ -88,7 +88,7 @@
         <div class="popular__posts">
 
             <?php
-            foreach ($cards as $card):
+            foreach ($cards as $index => $card):
                 ?>
 
                 <article class="popular__post post <?= $card['type']; ?>">
@@ -174,7 +174,14 @@
                                 </div>
                                 <div class="post__info">
                                     <b class="post__author-name"><?= htmlspecialchars($card['username']); ?></b>
-                                    <time class="post__time" datetime="">дата</time>
+                                    <?php $post_date = generate_random_date($index);?>
+
+
+                                    <time class="post__time"  title="<?=date('d.m.Y H:i', strtotime($post_date));?>"
+                                          datetime="<?=$post_date;?>">
+                                    <?=date_formatter($post_date);?>
+                                    </time>
+
                                 </div>
                             </a>
                         </div>
