@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
  `id` INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
  `post_header` CHAR,
- `post_content` TEXT,
+ `post_content` VARCHAR(1000),  -- так работает 
+--  `post_content` TEXT,
  `post_author_id` INT UNSIGNED NOT NULL,
  `post_content_type_id` INT UNSIGNED NOT NULL,
  `image` TEXT,
